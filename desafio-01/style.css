@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+:root {
+    --bg-main: #2a2141;
+    --main-text: #e1e1e6;
+    --pb-bg: #c4c4cc; /*progress-bar background */
+    --pb-fg: #d9d9d9; /*progress-bar background */
+    --buttons: #e1e1e6;
+    font-family: "Roboto", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #0f0d13;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.players {
+    display: flex;
+    gap: 32px;
+}
+.landscape-players {
+    width: 358px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.portrait {
+    width: 270px;
+    height: 498px;
+}
+
+.bg-main {
+    background: var(--bg-main);
+}
+
+.player-portrait {
+    border-radius: 10px;
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 29px;
+}
+
+.portrait-cover {
+    width: 100%;
+    height: 100%;
+}
+
+.song-metadata {
+    color: var(--main-text);
+    text-align: start;
+    width: 100%;
+}
+
+.song-name {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.song-author {
+    font-size: 18px;
+    font-weight: 400;
+    opacity: 0.5;
+    margin-top: 8px;
+}
+
+.song-controls {
+    display: flex;
+    justify-content: space-between;
+    width: 190px;
+}
+.song-controls button {
+    background-color: transparent;
+    border: none;
+}
+
+.player-progress {
+    width: 100%;
+}
+
+.progress-meter {
+    border: none;
+    width: 100%;
+    height: 6px;
+    background-color: #c4c4cc32;
+    border-radius: 6px;
+    position: relative;
+}
+
+.progress-meter-done {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 6px;
+    opacity: 1;
+    border-radius: 6px;
+    background-color: var(--pb-fg);
+}
+.progress-meter-done[data-done-pct] {
+    width: attr(data-done-pct) px;
+}
+
+.player-progress-time {
+    margin-top: 8px;
+    color: var(--main-text);
+    opacity: 0.5;
+    display: flex;
+    justify-content: space-between;
+}
+
+.landscape-expanded {
+    width: 100%;
+    height: 270px;
+    border-radius: 10px;
+    padding: 29px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+.landscape-collapsed {
+    width: 100%;
+    height: 196px;
+    border-radius: 10px;
+    padding: 29px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.small {
+    height: 84px;
+    width: 84px;
+}
+
+.song-props {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 30px;
+}
